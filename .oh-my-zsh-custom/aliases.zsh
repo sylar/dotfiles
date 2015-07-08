@@ -44,10 +44,6 @@ alias sprr="pbpaste | spr | pbcopy"
 alias ip='ipconfig getifaddr en0'
 alias eip='curl icanhazip.com'
 
-# VPN / Pi
-alias shadow='ssh -p 8888 andrei@104.236.27.40'
-alias pi='ssh pi@192.168.1.7'
-
 # Extra on startup scripts
 # eval "$(rbenv init - zsh --no-rehash)"
 . `brew --prefix`/etc/profile.d/z.sh

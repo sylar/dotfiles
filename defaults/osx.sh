@@ -32,8 +32,8 @@ sudo tmutil disablelocal
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
-# Stop iTunes from responding to the keyboard media keys.
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+# Stop iTunes from responding to the keyboard media keys - NOT fun for  MUSIC.
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ## Menu bar.
 

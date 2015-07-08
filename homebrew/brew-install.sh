@@ -9,7 +9,6 @@ brew upgrade
 # Utility/essential programs.
 brew install htop
 brew install hub
-brew install mosh
 brew install ssh-copy-id
 brew install tmux
 brew install tree
@@ -34,7 +33,6 @@ brew install toilet
 #other
 brew install git-extras
 brew install heroku-toolbelt
-
 
 # Remove outdated versions from the cellar.
 brew cleanup
