@@ -1,12 +1,11 @@
-echo " Installing brew apps."
+echo "Brewing apps and tools."
 
-# Make sure we’re using the latest Homebrew.
+echo "Updating and upgrading Homebrew."
 brew update
-
-# Upgrade any already-installed formulae.
 brew upgrade
 
-# Utility/essential programs.
+echo "Installing essentials."
+brew install fish
 brew install htop
 brew install hub
 brew install ssh-copy-id
@@ -14,13 +13,13 @@ brew install tmux
 brew install tree
 brew install wget
 brew install z
-brew install zsh
 
-# Development dependencies.
-# brew install aredridel/iojs/iojs
+echo "Installing dev deps."
+brew install heroku-toolbelt
+brew install git-extras
 brew install node
 
-# Games and fun stuff.
+echo "Installing games and cool stuff."
 brew install archey
 brew install cmatrix
 brew install cowsay
@@ -30,24 +29,13 @@ brew install homebrew/games/nethack
 brew install sl
 brew install toilet
 
-#other
-brew install git-extras
-brew install heroku-toolbelt
-
-# Remove outdated versions from the cellar.
+echo "Cleaning up the Cellar."
 brew cleanup
 
-# Run brew caveats.
-echo "Running brew caveats. May require sudo."
-
-# htop weirdery.
-sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop
-sudo chmod u+s /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop
-
-# Change default shell to zsh.
-if ! grep --quiet $(which zsh) /etc/shells; then
-  sudo sh -c "echo $(which zsh) >> /etc/shells"
+echo "Fish it."
+if ! grep --quiet $(which fish) /etc/shells; then
+  sudo sh -c "echo $(which fish) >> /etc/shells"
 fi
-chsh -s $(which zsh)
+chsh -s $(which fish)
 
-echo "Successfully installed all brew apps.\n"
+echo "Successfully brewed everything.\n"
