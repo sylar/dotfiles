@@ -6,9 +6,9 @@ These are my dotfiles. They are OSX-only, feel free to fork it and add support f
 
 Just clone the repo and run `./install.sh` in the repo folder.
 
-### Problems? Suggestions?
+### Seen a problem?
 
-I love PRs and fixing issue. Feel free to use either of them, depending the case.
+Fork and PR. :)
 
 ### Credits
 Heavily inspired by:
