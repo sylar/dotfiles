@@ -2,17 +2,14 @@ echo "Brewing apps and tools."
 
 echo "Updating and upgrading Homebrew."
 brew update
-brew upgrade
 
 echo "Installing essentials."
 brew install fish
-brew install htop
 brew install hub
 brew install ssh-copy-id
 brew install tmux
 brew install tree
 brew install wget
-brew install z
 
 echo "Installing dev deps."
 brew install heroku-toolbelt
