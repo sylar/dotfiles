@@ -12,4 +12,4 @@ echo "\nLet me do some magic.\n"
 cp -rv .config ~
 cp -rv .atom ~
 
-echo " All done! Enjoy.\n"
+echo " All done!.\n"
