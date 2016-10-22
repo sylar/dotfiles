@@ -1,18 +1,17 @@
-# dotfiles
+# the dotfiles.
+---
+Here are my dotfiles. They are `OSX`-only, feel free to fork it and add support for Linux as well... and PR! :smile:
 
-These are my dotfiles. They are OSX-only, feel free to fork it and add support for Linux as well... and PR! :smile
-
-### Install
+### install.
 
 Just clone the repo and run `./install.sh` in the repo folder.
 
-### Seen a problem?
+### problem?
 
-Fork and PR. :)
+Fork and PR. 🍺
 
-### Credits
+### credits.
 Heavily inspired by:
-
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
 - [Steve Losh](https://bitbucket.org/sjl/dotfiles/src/e8ba45f413665278c11f2de3a1d67a1da3832d34/osx.sh?at=default)
 - [Gary Bernhardt](https://github.com/garybernhardt/dotfiles)
@@ -20,6 +19,6 @@ Heavily inspired by:
 - [secrets.blacktree.com](http://secrets.blacktree.com)
 - [tvararu](https://github.com/tvararu/dotfiles)
 
-### License
+### license.
 
 MIT.
