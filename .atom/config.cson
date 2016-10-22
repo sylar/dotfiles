@@ -1,0 +1,29 @@
+"*":
+  "atom-beautify":
+    html:
+      indent_size: 2
+      preserve_newlines: false
+  welcome:
+    showOnStartup: false
+  core:
+    disabledPackages: [
+      "linter-eslint"
+    ]
+  editor:
+    fontFamily: "\"Fira Code\""
+    fontSize: 12
+    invisibles: {}
+    preferredLineLength: 120
+  linter:
+    lintOnFly: false
+  "one-dark-ui":
+    layoutMode: "Compact"
+  "one-light-ui":
+    layoutMode: "Compact"
+  "file-icons":
+    onChanges: true
+  tabs:
+    enableVcsColoring: true
+  react: {}
+  "linter-js-standard":
+    honorStyleSettings: true

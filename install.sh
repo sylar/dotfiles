@@ -6,8 +6,10 @@ echo "\nLet me do some magic.\n"
 
 ./homebrew/install.sh
 
-./extra/extra.sh
+./configs/atom.sh
+./configs/npm.sh
 
 cp -rv .config ~
+cp -rv .atom ~
 
 echo " All done! Enjoy.\n"
