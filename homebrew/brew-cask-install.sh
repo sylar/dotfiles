@@ -22,5 +22,6 @@ brew cask install battle-net
 brew cask install spotify
 brew casm install noslerp
 brew cask install steam
+brew cask install qlmarkdown
 
 echo "Successfully brewed cask apps.\n"

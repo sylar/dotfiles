@@ -88,9 +88,9 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 echo "- Expand the following File Info panes: General, Open with, and Sharing & Permissions."
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
-	General -bool true \
-	OpenWith -bool true \
-	Privileges -bool true
+  General -bool true \
+  OpenWith -bool true \
+  Privileges -bool true
 
 echo "- Hide icons for hard drives, servers, and removable media on the desktop."
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
