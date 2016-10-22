@@ -1,3 +1,3 @@
 function eip
-	curl icanhazip.com
+  curl icanhazip.com
 end

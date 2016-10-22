@@ -1,3 +1,3 @@
 function spr
-	curl -sF 'sprunge=<-' http://sprunge.us
+  curl -sF 'sprunge=<-' http://sprunge.us
 end

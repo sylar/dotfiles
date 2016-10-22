@@ -1,3 +1,3 @@
 function gpu
-	git push -u origin (git rev-parse --abbrev-ref HEAD)
+  git push $argv -u origin (git rev-parse --abbrev-ref HEAD)
 end

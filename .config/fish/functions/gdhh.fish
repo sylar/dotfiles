@@ -1,3 +1,3 @@
 function gdhh
-	git diff HEAD^ HEAD
+  git diff HEAD^ HEAD
 end

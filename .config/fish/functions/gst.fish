@@ -1,3 +1,3 @@
 function gst
-	git status $args
+  git status $args
 end

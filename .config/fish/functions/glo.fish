@@ -1,3 +1,3 @@
 function glo
-	git log --oneline --decorate --color --graph
+  git log --oneline --decorate --color --graph
 end

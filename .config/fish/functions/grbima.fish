@@ -1,3 +1,3 @@
 function grbima
-	git rebase -i master --autosquash
+  git rebase -i master --autosquash
 end

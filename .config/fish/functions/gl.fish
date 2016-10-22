@@ -1,3 +1,3 @@
 function gl
-	git pull --rebase $argv
+  git pull --rebase $argv
 end

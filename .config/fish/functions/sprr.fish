@@ -1,3 +1,3 @@
 function sprr
-	pbpaste | spr | pbcopy
+  pbpaste | spr | pbcopy
 end

@@ -1,3 +1,3 @@
 function gcm
-	git commit
+  git commit
 end

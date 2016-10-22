@@ -1,3 +1,3 @@
 function gda
-	git diff --cached $argv
+  git diff --cached $argv
 end

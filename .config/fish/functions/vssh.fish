@@ -1,3 +1,3 @@
 function vssh
-	vagrant ssh
+  vagrant ssh
 end

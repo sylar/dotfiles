@@ -1,3 +1,3 @@
 function gpr
-	git pull-request $argv
+  git pull-request $argv
 end
