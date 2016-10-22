@@ -1,5 +1,4 @@
 # the dotfiles.
----
 Here are my dotfiles. They are `OSX`-only, feel free to fork it and add support for Linux as well... and PR! :smile:
 
 ### install.
