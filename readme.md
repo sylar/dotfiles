@@ -3,7 +3,7 @@ Here are my dotfiles. They are `OSX`-only, feel free to fork it and add support 
 
 ### install.
 
-Just clone the repo and run `./install.sh` in the repo folder.
+Just clone the repo and run `./install.sh`.
 
 ### problem?
 
