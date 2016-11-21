@@ -7,7 +7,7 @@ echo "\nLet me do some magic.\n"
 ./homebrew/install.sh
 
 ./configs/atom.sh
-./configs/npm.sh
+./configs/yarn.sh
 
 cp -rv .config ~
 cp -rv .atom ~
