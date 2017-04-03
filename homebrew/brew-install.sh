@@ -15,7 +15,7 @@ echo "Installing dev deps."
 brew install heroku-toolbelt
 brew install git-extras
 brew install node
-brew insatll yarn
+brew install yarn
 
 echo "Installing games and cool stuff."
 brew install archey
