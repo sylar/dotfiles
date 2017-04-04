@@ -17,6 +17,7 @@ Heavily inspired by:
 - [vladh](https://github.com/vladh/dotfiles)
 - [secrets.blacktree.com](http://secrets.blacktree.com)
 - [tvararu](https://github.com/tvararu/dotfiles)
+- [tonsky](https://github.com/tonsky/FiraCode) - FiraCode Font.
 
 ### license.
 
