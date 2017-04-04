@@ -27,6 +27,11 @@ brew install homebrew/games/nethack
 brew install sl
 brew install toilet
 
+echo "Installing GPG tools."
+brew install gpg
+brew install gpg-agent
+brew insatll pinentry-mac
+
 echo "Cleaning up the Cellar."
 brew cleanup
 
