@@ -1,3 +1,3 @@
 function gcmsg
-  git commit -m $argv
+  git commit -m -S $argv
 end
