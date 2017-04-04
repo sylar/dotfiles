@@ -1,3 +1,4 @@
 function g
-  git $argv
+  gst
+  gb
 end
