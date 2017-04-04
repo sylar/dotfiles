@@ -2,7 +2,7 @@
 set fish_greeting ""
 
 # Set yarn global path.
-set PATH $PATH "/Users/"$USER"/.yarn-config/global/node_modules/.bin"
+set PATH $PATH "/Users/"$USER"/.config/yarn/global/node_modules/.bin"
 
 # Make gpg agent auto run for signing commits.
 if [ -z (pgrep gpg-agent) ]
