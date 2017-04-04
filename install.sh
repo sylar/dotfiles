@@ -11,5 +11,6 @@ echo "\nLet me do some magic.\n"
 
 cp -rv .config ~
 cp -rv .atom ~
+cp -rv fonts/*.* ~/Library/Fonts/
 
 echo " All done!.\n"
