@@ -14,13 +14,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ./scripts/defaults.sh $1
 
 # Install homebrew and apps.
-./scripts/homebrew.sh $1
+# ./scripts/homebrew.sh $1
 
 # Install global node packages.
-./scripts/npm.sh
+# ./scripts/npm.sh
 
 # Configure VS Code.
-./scripts/vscode.sh
+# ./scripts/vscode.sh
 
 # Remove new shell ooutput
 touch ~/.hushlogin
@@ -29,7 +29,7 @@ touch ~/.hushlogin
 ./scripts/git.sh
 
 # Copy extra assets
-./scripts/assets.sh
+# ./scripts/assets.sh
 
 printf "%s\n"  "Setup Finished!"
 

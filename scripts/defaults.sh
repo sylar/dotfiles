@@ -1,7 +1,7 @@
 #!/bin/sh
 
-printf "%s\n\n"  "Configuring MacOS."
+printf "Configuring MacOS."
 
 ./lib/defaults/macos.sh $1
 
-printf "%s\n"  "MacOS configured successfully."
+printf "MacOS configured successfully."
