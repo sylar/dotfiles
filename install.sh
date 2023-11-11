@@ -1,39 +1,58 @@
 #!/bin/sh
 
-export FLAG=-p
+echo "\n macOS setup."
 
-printf "%s\n\n"  " Setup"
+echo  "\nAdmin powers needed."
+sudo -v
 
-printf "%s\n"  "Admin powers needed."
-sudo -v -E
+echo "\nWhat's the device name?"
+read -p "Computer Name: " computerName
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Configure MacOS settings.
-./scripts/defaults.sh $1
+# Restore defaults
+./macos.sh
 
-# Install homebrew and apps.
-# ./scripts/homebrew.sh $1
+echo "\n Homebrew"
 
-# Install global node packages.
-# ./scripts/npm.sh
+if command -v brew >/dev/null 2>&1; then
+  echo "Already installed. Updating..."
+  brew update
+  brew upgrade
+else
+  echo "Installing..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  
+  brew doctor
+  
+  echo "Installed"
+fi
 
-# Configure VS Code.
-# ./scripts/vscode.sh
+echo "\nCopying configs"
+brew install stow --quiet
+mkdir ~/.ssh ~/.config
 
-# Remove new shell ooutput
+stow -R fish git homebrew ssh iterm2
+
+echo "\nBundling brew formulae and other goodies"
+brew bundle --global
+
+echo "\nCleanup new shell"
 touch ~/.hushlogin
 
-# Configure SSH.
-./scripts/git.sh
+echo "\nCleanup brew artefacts"
+brew cleanup
 
-# Copy extra assets
-# ./scripts/assets.sh
+echo "\nChange the shell to fish"
+if ! grep --quiet $(which fish) /etc/shells; then
+  sudo sh -c "echo $(which fish) >> /etc/shells"
+  chsh -s $(which fish)
+fi
 
-printf "%s\n"  "Setup Finished!"
+echo "\n All done."
 
-printf "%s\n"  "Press any key to restart..."
+echo "\nPress any key to restart..."
 read -p  "" -n1 -s
 
-sudo reboot
+reboot
