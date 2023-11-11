@@ -1,17 +1,28 @@
 #!/bin/sh
 
-echo "\n macOS setup."
+# echo "\n macOS setup"
 
+# echo  "\nAdmin powers needed"
+# sudo -v
+
+echo "\nConfig info needed"
 USERNAME=$(whoami)
 
-sed -i "s/__USER__/$USERNAME/g" "./macos.sh"
-sed -i "s/__USER__/$USERNAME/g" "./git/.gitconfig"
+read -p "Computer Name: " COMPUTERNAME
+read -p "Git name: " GITNAME
+read -p "Git email: " GITEMAIL
 
-echo  "\nAdmin powers needed."
-sudo -v
+# Create .gitconfig
+sed "s/__USERNAME__/$USERNAME/g; s/__GITNAME__/$GITNAME/g; s/__GITEMAIL__/$GITEMAIL/g" "./.gitconfig.template" > "./git/.gitconfig"
 
-echo "\nWhat's the device name?"
-read -p "Computer Name: " computerName
+# Updating paths
+sed -i '' "s/__USERNAME__/$USERNAME/g" "./macos.sh"
+
+# Updating computer name and hostnames
+sudo scutil --set ComputerName "$COMPUTERNAME"
+sudo scutil --set LocalHostName "$COMPUTERNAME"
+sudo scutil --set HostName "$COMPUTERNAME"
+
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
