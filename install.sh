@@ -2,6 +2,11 @@
 
 echo "\n macOS setup."
 
+USERNAME=$(whoami)
+
+sed -i "s/__USER__/$USERNAME/g" "./macos.sh"
+sed -i "s/__USER__/$USERNAME/g" "./git/.gitconfig"
+
 echo  "\nAdmin powers needed."
 sudo -v
 
@@ -49,6 +54,8 @@ if ! grep --quiet $(which fish) /etc/shells; then
   sudo sh -c "echo $(which fish) >> /etc/shells"
   chsh -s $(which fish)
 fi
+
+git checkout .
 
 echo "\n All done."
 
