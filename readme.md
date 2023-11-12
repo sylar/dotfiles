@@ -4,13 +4,11 @@ I maintain my own dotfiles to customize and set up my development environment. I
 
 Currently it manages
 
-- macos defaults
 - ssh config
 - brew goodies (formulae, apps, mac app store apps, vscode plugins)
 - iterm2 config
 - fish configs and functions
-
-The `.gitconfig` is genereted based of the [template](templates/.gitconfig)
+- templates for [.gitconfig](templates/.gitconfig) and [macos defaults](templates/defaults.sh) files
 
 ## Install
 
