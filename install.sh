@@ -13,7 +13,7 @@ read -p "Git name: " GITNAME
 read -p "Git email: " GITEMAIL
 
 # Create .gitconfig
-sed "s/__USERNAME__/$USERNAME/g; s/__GITNAME__/$GITNAME/g; s/__GITEMAIL__/$GITEMAIL/g" "./.gitconfig.template" > "./git/.gitconfig"
+sed "s/__USERNAME__/$USERNAME/g; s/__GITNAME__/$GITNAME/g; s/__GITEMAIL__/$GITEMAIL/g" "./templates/.gitconfig" > "./git/.gitconfig"
 
 # Updating paths
 sed -i '' "s/__USERNAME__/$USERNAME/g" "./macos.sh"
