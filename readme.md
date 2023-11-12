@@ -16,7 +16,7 @@ The `.gitconfig` is genereted based of the [template](templates/.gitconfig)
 
 ```bash
 $ cd ~
-$ git clone https://github.com/sylar/dotfiles
+$ git clone --depth 1 https://github.com/sylar/dotfiles
 $ cd dotfiles
 $ ./install.sh
 ```
