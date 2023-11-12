@@ -16,7 +16,8 @@ read -p "Git email: " GITEMAIL
 sed "s/__USERNAME__/$USERNAME/g; s/__GITNAME__/$GITNAME/g; s/__GITEMAIL__/$GITEMAIL/g" "./templates/.gitconfig" > "./git/.gitconfig"
 
 # Updating paths
-sed -i '' "s/__USERNAME__/$USERNAME/g" "./macos.sh"
+sed "s/__USERNAME__/$USERNAME/g" "./defaults.sh" > "./macos.sh"
+chmod +x ./macos.sh
 
 # Updating computer name and hostnames
 sudo scutil --set ComputerName "$COMPUTERNAME"
@@ -28,7 +29,7 @@ sudo scutil --set HostName "$COMPUTERNAME"
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Restore defaults
-./macos.sh
+./defaults.sh
 
 echo "\n Homebrew"
 
@@ -66,8 +67,6 @@ if ! grep --quiet $(which fish) /etc/shells; then
   sudo sh -c "echo $(which fish) >> /etc/shells"
   chsh -s $(which fish)
 fi
-
-git checkout .
 
 echo "\n All done."
 
