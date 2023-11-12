@@ -16,7 +16,7 @@ read -p "Git email: " GITEMAIL
 sed "s/__USERNAME__/$USERNAME/g; s/__GITNAME__/$GITNAME/g; s/__GITEMAIL__/$GITEMAIL/g" "./templates/.gitconfig" > "./git/.gitconfig"
 
 # Updating paths
-sed "s/__USERNAME__/$USERNAME/g" "./defaults.sh" > "./macos.sh"
+sed "s/__USERNAME__/$USERNAME/g" "./templates/defaults.sh" > "./macos.sh"
 chmod +x ./macos.sh
 
 # Updating computer name and hostnames
@@ -24,12 +24,11 @@ sudo scutil --set ComputerName "$COMPUTERNAME"
 sudo scutil --set LocalHostName "$COMPUTERNAME"
 sudo scutil --set HostName "$COMPUTERNAME"
 
-
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Restore defaults
-./defaults.sh
+./macos.sh
 
 echo "\n Homebrew"
 
