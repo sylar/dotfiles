@@ -1,47 +1,75 @@
+tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
-
+brew "bfg"
+brew "btop"
+brew "cmake"
+brew "duf"
 brew "fish"
+brew "gh"
+brew "git-delta"
+brew "unbound"
+brew "gnupg"
+brew "gping"
 brew "jq"
-brew "node"
+brew "lsd"
 brew "mas"
+brew "node"
+brew "ollama"
+brew "python@3.11"
+brew "ssh-copy-id"
+brew "stow"
+brew "tig"
 brew "tree"
 brew "yt-dlp"
-brew "stow"
-brew "duf"
-brew "btop"
-brew "lsd"
-brew "ssh-copy-id"
 brew "zoxide"
-brew "tig"
-
 cask "1password"
 cask "alfred"
 cask "appcleaner"
 cask "arc"
 cask "citrix-workspace"
-cask "visual-studio-code"
+cask "discord"
 cask "docker"
+cask "font-fira-code-nerd-font"
+cask "inkscape"
 cask "iterm2"
-cask "rectangle"
 cask "messenger"
-cask "telegram"
-cask "the-unarchiver"
 cask "mullvad-browser"
 cask "mullvadvpn"
-cask "vlc"
-cask "transmission"
 cask "obsidian"
 cask "orion"
+cask "rectangle"
 cask "signal"
+cask "telegram"
+cask "the-unarchiver"
 cask "transmission"
-cask "font-fira-code-nerd-font"
-
-mas "keynote", id: 409183694
-mas "numbers", id: 409203825
-mas "pages", id: 409201541
-mas "xcode", id: 497799835
-mas "whatsapp-messenger", id: 310633997
-mas "things-3", id: 904280696
-mas "wireguard", id: 1451685025
-mas "kagi-search-for-safari", id: 1622835804
-mas "1password-for-safari", id: 1569813296
+cask "visual-studio-code"
+cask "vlc"
+mas "1Password for Safari", id: 1569813296
+mas "Kagi Inc.", id: 1622835804
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Things", id: 904280696
+mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
+mas "‎WhatsApp", id: 310633997
+vscode "bradlc.vscode-tailwindcss"
+vscode "chekweitan.compare-view"
+vscode "dbaeumer.vscode-eslint"
+vscode "esbenp.prettier-vscode"
+vscode "kesmarag.base16-tomorrow-night"
+vscode "kumar-harsh.graphql-for-vscode"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.atom-keybindings"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "nashokin.base16-tomorrow-night"
+vscode "pmndrs.pmndrs"
+vscode "SilasNevstad.gpthelper"
+vscode "tombonnike.vscode-status-bar-format-toggle"
+vscode "waderyan.gitblame"
+vscode "yzhang.markdown-all-in-one"
+vscode "zgm.vscode-fish"
+vscode "zhuangtongfa.material-theme"
