@@ -38,8 +38,9 @@ if command -v brew >/dev/null 2>&1; then
   brew upgrade
 else
   echo "Installing..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  sudo  xcodebuild -license accept
   brew doctor
   
   echo "Installed"
