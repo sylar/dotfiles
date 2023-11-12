@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# echo "\n macOS setup"
+echo "\n macOS setup"
 
-# echo  "\nAdmin powers needed"
-# sudo -v
+echo  "\nAdmin powers needed"
+sudo -v
 
 echo "\nConfig info needed"
 USERNAME=$(whoami)
@@ -45,14 +45,15 @@ else
   echo "Installed"
 fi
 
-echo "\nCopying configs"
 brew install stow --quiet
+
+echo "\nCopying configs"
 mkdir ~/.ssh ~/.config
 
 stow -R fish git homebrew ssh iterm2
 
 echo "\nBundling brew formulae and other goodies"
-brew bundle --global
+brew bundle --global --no-lock
 
 echo "\nCleanup new shell"
 touch ~/.hushlogin
