@@ -53,10 +53,12 @@ brew install stow --quiet
 echo "\nCopying configs"
 mkdir ~/.ssh ~/.config
 
-stow -R fish git homebrew ssh iterm2
+stow -R fish git homebrew ssh iterm2h
 
 echo "\nBundling brew formulae and other goodies"
 brew bundle --global --no-lock
+
+sudo xcodebuild -license accept
 
 echo "\nCleanup new shell"
 touch ~/.hushlogin
