@@ -77,4 +77,4 @@ echo "\n All done."
 echo "\nPress any key to restart..."
 read -p  "" -n1 -s
 
-reboot
+sudo reboot
