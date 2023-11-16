@@ -69,8 +69,9 @@ brew cleanup
 echo "\nChange the shell to fish"
 if ! grep --quiet $(which fish) /etc/shells; then
   sudo sh -c "echo $(which fish) >> /etc/shells"
-  chsh -s $(which fish)
 fi
+
+chsh -s $(which fish)
 
 echo "\n All done."
 
