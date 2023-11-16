@@ -53,7 +53,7 @@ brew install stow --quiet
 echo "\nCopying configs"
 mkdir ~/.ssh ~/.config ~/.alfred
 
-stow -R fish git homebrew ssh iterm2 alfred
+stow -R fish git homebrew ssh iterm2 alfred asdf
 
 echo "\nBundling brew formulae and other goodies"
 brew bundle --global --no-lock
