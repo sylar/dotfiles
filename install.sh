@@ -51,9 +51,9 @@ source /Users/$USERNAME/.zprofile
 brew install stow --quiet
 
 echo "\nCopying configs"
-mkdir ~/.ssh ~/.config
+mkdir ~/.ssh ~/.config ~/.alfred
 
-stow -R fish git homebrew ssh iterm2h
+stow -R fish git homebrew ssh iterm2 alfred
 
 echo "\nBundling brew formulae and other goodies"
 brew bundle --global --no-lock
