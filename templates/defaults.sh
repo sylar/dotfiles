@@ -161,18 +161,18 @@ defaults write com.apple.dock show-process-indicators -bool true
 echo "\nSafari\n"
 
 echo "- Enable debug menu"
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+sudo defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 echo "- Search mode Contains, instead of Starts With"
-defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+sudo defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 echo "- Enable the Develop menu and the Web Inspector in Safari"
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+sudo defaults write com.apple.Safari IncludeDevelopMenu -bool true
+sudo defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+sudo defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 echo "- Disable auto-correct"
-defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
+sudo defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
 
 echo "\nTransmission.app \n"
 
