@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+brew "openssl@3"
 brew "asdf"
 brew "bfg"
 brew "btop"
@@ -8,17 +9,14 @@ brew "duf"
 brew "fish"
 brew "gh"
 brew "git-delta"
-brew "gping"
 brew "jq"
 brew "lsd"
 brew "mas"
 brew "ollama"
-brew "openssl@3", link: false
 brew "ssh-copy-id"
 brew "stow"
 brew "tig"
 brew "tree"
-brew "unbound"
 brew "zoxide"
 cask "1password"
 cask "alfred"
@@ -39,7 +37,6 @@ cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
 mas "1Password for Safari", id: 1569813296
-mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
