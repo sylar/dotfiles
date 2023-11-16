@@ -45,6 +45,9 @@ else
   echo "Installed"
 fi
 
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USERNAME/.zprofile
+source /Users/$USERNAME/.zprofile
+
 brew install stow --quiet
 
 echo "\nCopying configs"
