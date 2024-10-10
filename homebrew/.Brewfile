@@ -47,7 +47,6 @@ cask "steam"
 cask "telegram"
 cask "the-unarchiver"
 cask "transmission"
-cask "visual-studio-code"
 cask "vlc"
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
