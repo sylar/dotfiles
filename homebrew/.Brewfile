@@ -4,9 +4,7 @@ brew "asdf"
 brew "awscli"
 brew "btop"
 brew "glib"
-brew "cmake"
-brew "gnupg"
-brew "gpgme"
+brew "diff-pdf"
 brew "duf"
 brew "fish"
 brew "gh"
@@ -27,6 +25,7 @@ cask "1password"
 cask "1password-cli"
 cask "alfred"
 cask "appcleaner"
+cask "cursor"
 cask "docker"
 cask "eloston-chromium"
 cask "font-fira-code-nerd-font"
@@ -50,10 +49,11 @@ cask "the-unarchiver"
 cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
+cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "com.kagimacOS.Kagi-Search", id: 1622835804
-mas "iMovie", id: 408981434
+mas "Infuse", id: 1136220934
 mas "JSONPeep", id: 1458969831
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
