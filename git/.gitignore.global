@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 .tm_properties
+unlikelyai/ul-platform/frontends/.tool-versions
 
 
 # Xcode
