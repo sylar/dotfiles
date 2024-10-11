@@ -60,6 +60,15 @@ brew bundle --global --no-lock
 
 sudo xcodebuild -license accept
 
+echo "\Add Nodejs asdf plugin"
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+echo "\Install latest nodejs"
+asdf install nodejs latest
+
+echo "\Set nodejs version to global"
+asdf global nodejs latest
+
 echo "\nCleanup new shell"
 touch ~/.hushlogin
 
