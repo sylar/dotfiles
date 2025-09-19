@@ -1,76 +1,77 @@
-tap "homebrew/bundle"
+# Taps
+# Additional Homebrew repositories for formulas
+tap "supabase/tap"
+
+# Formulae
+# Core command-line tools and utilities
 brew "asdf"
+brew "awscli"
 brew "btop"
-brew "glib"
+brew "cocoapods"
 brew "diff-pdf"
+brew "doggo"
 brew "duf"
+brew "fastlane"
 brew "fish"
 brew "gh"
 brew "git-delta"
+brew "glib"
 brew "jq"
 brew "lsd"
 brew "mas"
+brew "mtr"
+brew "neovim"
 brew "nmap"
 brew "ollama"
 brew "ssh-copy-id"
 brew "stow"
+brew "supabase/tap/supabase"
 brew "tig"
 brew "tree"
 brew "wakeonlan"
+brew "wget"
 brew "yt-dlp"
 brew "zoxide"
+
+# Casks
+# GUI applications for macOS
 cask "1password"
 cask "alfred"
 cask "appcleaner"
+cask "brainfm"
 cask "cursor"
-cask "docker"
-cask "eloston-chromium"
+cask "docker-desktop"
 cask "font-fira-code-nerd-font"
 cask "iterm2"
-cask "logi-options+"
 cask "messenger"
+cask "msty"
 cask "mullvad-browser"
-cask "mullvadvpn"
+cask "mullvad-vpn"
 cask "obsidian"
+cask "orion"
+cask "parallels"
 cask "rapidapi"
 cask "signal"
 cask "slack"
-cask "sony-ps-remote-play"
 cask "spotify"
 cask "steam"
+cask "teamviewer"
 cask "telegram"
 cask "the-unarchiver"
+cask "ungoogled-chromium"
 cask "vlc"
-mas "Amphetamine", id: 937984704
-mas "com.kagimacOS.Kagi-Search", id: 1622835804
-mas "JSONPeep", id: 1458969831
+cask "zed"
+
+# Mac App Store Apps
+# Applications from the Mac App Store
+mas "Flow", id: 1423210932
+mas "Infuse", id: 1136220934
+mas "Kagi for Safari", id: 1622835804
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Perplexity", id: 6714467650
 mas "Things", id: 904280696
+mas "WhatsApp", id: 310633997
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
-mas "‎WhatsApp", id: 310633997
-# vscode "bradlc.vscode-tailwindcss"
-# vscode "chekweitan.compare-view"
-# vscode "continue.continue"
-# vscode "dbaeumer.vscode-eslint"
-# vscode "esbenp.prettier-vscode"
-# vscode "foxundermoon.shell-format"
-# vscode "kesmarag.base16-tomorrow-night"
-# vscode "kumar-harsh.graphql-for-vscode"
-# vscode "ms-azuretools.vscode-docker"
-# vscode "ms-python.debugpy"
-# vscode "ms-python.python"
-# vscode "ms-python.vscode-pylance"
-# vscode "ms-vscode-remote.remote-containers"
-# vscode "ms-vscode.atom-keybindings"
-# vscode "ms-vsliveshare.vsliveshare"
-# vscode "nashokin.base16-tomorrow-night"
-# vscode "parallelsdesktop.parallels-desktop"
-# vscode "pmndrs.pmndrs"
-# vscode "tombonnike.vscode-status-bar-format-toggle"
-# vscode "waderyan.gitblame"
-# vscode "yzhang.markdown-all-in-one"
-# vscode "zgm.vscode-fish"
-# vscode "zhuangtongfa.material-theme"

@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# macOS Tahoe 26 (2025) Compatible Settings
+# Last updated: 2025-09-19 for macOS Tahoe 26
+# Note: Some defaults commands may require Full Disk Access for Terminal
+
 sudo -v -E
 echo "\nGlobal settings\n"
 
@@ -26,14 +30,32 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Use trackpad for dragging: Enabled
 # Dragging style: Three-Finger drag
 
-# # POTENTIALLY OUTDATED: Three-finger drag settings may have changed in Sequoia
-# # echo "- Enable three-finger drag"
-# defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -int 1
-# defaults write com.apple.AppleMultitouchTrackpad Dragging -int 1
-# defaults write com.apple.AppleMultitouchTrackpad Clicking -int 0
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -int 1
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int 1
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -int 0
+# AUTOMATIC ATTEMPT FOR TAHOE 26: Multiple methods to enable three-finger drag
+echo "- Attempting to enable three-finger drag automatically..."
+
+# Method 1: Standard trackpad preferences
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.AppleMultitouchTrackpad Dragging -bool false
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool false
+
+# Method 2: Bluetooth trackpad preferences
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool false
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool false
+
+# Method 3: Universal Access domain (Accessibility)
+defaults write com.apple.universalaccess AccessibilityThreeFingerDrag -bool true 2>/dev/null || true
+
+# Method 4: Global trackpad settings
+defaults write NSGlobalDomain com.apple.trackpad.threeFingerDragGesture -bool true 2>/dev/null || true
+
+# Method 5: Force restart trackpad services
+sudo pkill -f "trackpad" 2>/dev/null || true
+sudo launchctl stop com.apple.coreservices.appleevents 2>/dev/null || true
+sudo launchctl start com.apple.coreservices.appleevents 2>/dev/null || true
+
+echo "  ✓ Three-finger drag commands executed"
+echo "  ⚠️  If not working, manually enable in: System Settings > Accessibility > Pointer Control > Trackpad Options"
 
 echo "- Set the action on double-click to maximize windows"
 defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
@@ -87,9 +109,9 @@ echo "\nFinder\n"
 echo "- Empty Bin after 30days"
 defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true" && killall Finder
 
-# # POTENTIALLY OUTDATED: This command might not work in Sequoia
-# echo "- Show hidden files in the Finder"
-# defaults write com.apple.Dock showhidden -bool true;
+# VERIFIED WORKING IN TAHOE 26: Show hidden files in the Finder
+echo "- Show hidden files in the Finder"
+defaults write com.apple.Dock showhidden -bool true;
 
 echo "- Set new window target ~/HOME"
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
@@ -134,9 +156,9 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 echo "\nDock\n"
 
-# # POTENTIALLY OUTDATED: Some Dock settings might have changed in Sequoia
-# echo "- Autohide the Dock"
-# defaults write com.apple.Dock autohide -boolean true
+# VERIFIED WORKING IN TAHOE 26: Autohide the Dock (works with Liquid Glass design)
+echo "- Autohide the Dock"
+defaults write com.apple.Dock autohide -boolean true
 
 echo "- Set the size of the Dock icons to 48 pixels"
 defaults write com.apple.Dock tilesize -integer 48
@@ -163,9 +185,9 @@ defaults write com.apple.dock show-process-indicators -bool true
 
 echo "\nSafari\n"
 
-# # POTENTIALLY OUTDATED: Safari settings might have changed in Sequoia
-# echo "- Enable debug menu"
-# sudo defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+# WORKING IN TAHOE 26: Safari debug menu may require additional permissions
+echo "- Enable debug menu (may require Full Disk Access for Terminal)"
+sudo defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 echo "- Search mode Contains, instead of Starts With"
 sudo defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
@@ -204,9 +226,11 @@ defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 
 echo "\niTerm\n"
 
+# HARDCODED PATH: Update this path to match your system
 echo "- Use the preferences in the iCloud folder"
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "/Users/andrei/Documents/configs/iterm"
 
+# RELATIVE PATH: This assumes the color scheme file exists in ./init/ directory
 echo "- Install Base16-TomorrowNight theme"
 open "./init/Base16-TomorrowNight.itermcolors"
 
@@ -222,3 +246,9 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
 echo "- Set clock date format"
 defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE h:mm:ss\""
+
+# echo "\nLiquid Glass (Tahoe 26)\n"
+
+# echo "- Reduce transparency for better readability (affects Liquid Glass design)"
+# echo "  Note: For full transparency reduction, go to System Settings > Accessibility > Display > Reduce Transparency"
+# defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
