@@ -1,12 +1,8 @@
-# Taps
-# Additional Homebrew repositories for formulas
 tap "supabase/tap"
-
-# Formulae
-# Core command-line tools and utilities
 brew "asdf"
 brew "awscli"
 brew "btop"
+brew "glib"
 brew "cocoapods"
 brew "diff-pdf"
 brew "doggo"
@@ -15,7 +11,6 @@ brew "fastlane"
 brew "fish"
 brew "gh"
 brew "git-delta"
-brew "glib"
 brew "jq"
 brew "lsd"
 brew "mas"
@@ -25,18 +20,14 @@ brew "nmap"
 brew "ollama"
 brew "ssh-copy-id"
 brew "stow"
-brew "supabase/tap/supabase"
 brew "tig"
 brew "tree"
 brew "wakeonlan"
 brew "wget"
 brew "yt-dlp"
 brew "zoxide"
-
-# Casks
-# GUI applications for macOS
+brew "supabase/tap/supabase"
 cask "1password"
-cask "alfred"
 cask "appcleaner"
 cask "brainfm"
 cask "cursor"
@@ -55,15 +46,11 @@ cask "signal"
 cask "slack"
 cask "spotify"
 cask "steam"
-cask "teamviewer"
 cask "telegram"
 cask "the-unarchiver"
 cask "ungoogled-chromium"
 cask "vlc"
 cask "zed"
-
-# Mac App Store Apps
-# Applications from the Mac App Store
 mas "Flow", id: 1423210932
 mas "Infuse", id: 1136220934
 mas "Kagi for Safari", id: 1622835804

@@ -56,7 +56,7 @@ mkdir ~/.ssh ~/.config
 stow -R fish git homebrew ssh iterm2 asdf
 
 echo "\nBundling brew formulae and other goodies"
-brew bundle --global --no-lock
+brew bundle --global
 
 sudo xcodebuild -license accept
 
